@@ -1,0 +1,849 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/argentum-sans?styles=28995,28998,28988');
+
+@layer base {
+    @font-face {
+        font-family: 'otr';
+        font-style: normal;
+        font-weight: 100 200;
+        font-display: swap;
+        src: url("/fonts/OTRtype-Regular.woff") format('woff');
+        src: url("/fonts/OTRtype-Regular.woff2") format('woff2');
+        src: url("/fonts/OTRtypeGX.ttf");
+    }
+
+    @font-face {
+        font-family: 'Argentum Sans', sans-serif;
+        font-weight: 250 275 400;
+        src: url('https://fonts.cdnfonts.com/css/argentum-sans?styles=28995,28998,28988');
+    }
+}
+
+:root {
+    --white: #F5F5F5;
+    --beige: #D1BF9B;
+    --mocha: #948C7F;
+    --graphite: #31302C;
+    --creater_brown: #47443D;
+    --lime_green: #E2EE72;
+    --platinum_grey: #A8A99B;
+    --fog: #D5D6D0;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* Font styling */
+
+#headertext {
+    font-size: 0.625rem;
+    font-variation-settings: 'wght'130;
+}
+
+#herosubtitle {
+    font-size: 0.750rem;
+}
+
+
+.herotitlebig {
+    font-size: 3rem;
+    font-variation-settings: 'wght'105;
+}
+
+#herotitle-atthew {
+    font-size: 2rem;
+    font-variation-settings: 'wght'135;
+}
+
+#herotitle-erson {
+    font-size: 2rem;
+    font-variation-settings: 'wght'153;
+}
+
+#herotitle-astro {
+    font-size: 2rem;
+    font-variation-settings: 'wght'153;
+}
+
+#herotitle-ivar {
+    font-size: 2rem;
+    font-variation-settings: 'wght'180;
+}
+
+#v-spacing {
+    letter-spacing: -0.700rem;
+}
+
+#heroh1 {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.welcome {
+    font-variation-settings: 'wght'150;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    font-family: 'otr';
+    font-variation-settings: 'wght'105;
+    font-size: 1.250rem;
+
+}
+
+h3 {
+    font-family: 'otr';
+    font-variation-settings: 'wght'105;
+    font-size: 1.5rem;
+    letter-spacing: 0.075rem;
+}
+
+p {
+    font-family: 'Argentum Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 250;
+    line-height: 1.5rem;
+    letter-spacing: 0.030rem;
+}
+
+p.bold-text {
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+
+
+/* Preloader */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+.col {
+    flex-grow: 2;
+    width: 100%;
+    z-index: 1;
+    height: 1%;
+    border: none !important;
+
+}
+
+.box1 {
+    background: var(--beige);
+}
+
+img.me {
+    max-width: 50%;
+    margin: auto;
+
+}
+
+.projectitemcontainer {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 1.5rem;
+}
+
+.closeoverlayButton {
+    font-size: 0.55rem;
+    justify-self: right;
+    align-self: start;
+    letter-spacing: 0.2rem;
+    text-decoration-line: underline;
+
+}
+
+.closeoverlayButton:hover {
+    letter-spacing: .5rem;
+    transition: 0.75s linear;
+
+}
+
+.imagecontainer {
+    justify-self: center;
+    align-self: center;
+    grid-row: 4;
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 1rem;
+}
+
+.projectheader {
+    grid-row: 2;
+}
+
+h1.project-title {
+    font-family: 'otr';
+    font-size: 2rem;
+    font-variation-settings: 'wght'110;
+}
+
+
+
+.projectlinkButton {
+    border-radius: 17px;
+    padding: 4px 28px;
+    background-color: var(--creater_brown);
+    box-sizing: border-box;
+}
+
+
+section {
+    height: 95%;
+    /* margin-bottom: 10%; */
+}
+
+.projectimage {
+    width: 99%;
+}
+
+
+
+/* SKILLS SECTION */
+
+
+h3.rating {
+    /* font-family: 'Argentum Sans', sans-serif; */
+    font-family: 'otr';
+    font-variation-settings: 'wght'115;
+    font-size: 1rem;
+
+}
+
+.skill {
+    font-family: 'Argentum Sans', sans-serif;
+    color: var(--platinum_grey);
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 2s linear;
+    transition-delay: 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+
+/* CONTACT SECTION */
+
+#contact {
+    z-index: 10;
+    transform: translate(0px, 0px);
+}
+
+a.email {
+    font-family: 'Argentum Sans', sans-serif;
+    /* font-size: 1.75rem; */
+    font-weight: 550;
+    line-height: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.text-banner {
+    color: var(--mocha);
+}
+
+.text-banner:hover {
+    color: var(--lime_green);
+    transition: 0.7s ease-in-out;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 2vw));
+    }
+}
+
+.text-banner li {
+    animation: slideLeft 30s linear infinite;
+}
+
+footer {
+    background-color: white;
+}
+
+
+/* FOR SUBPAGES */
+
+.grid-item {
+    row-gap: 1rem;
+}
+
+
+/* danishgallery */
+
+div#mobileview-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dropshadow {
+    filter: drop-shadow(4px 6px 11px rgba(49, 48, 44, 0.31));
+}
+
+.rowgap5 {
+    row-gap: 7rem;
+}
+
+.top-margin {
+    margin-top: 2rem;
+}
+
+
+.bot-margin {
+    margin-bottom: 2rem;
+}
+
+.ccbot-margin {
+    margin-bottom: 15rem;
+
+}
+
+/* CC */
+iframe {
+    width: 320px;
+    height: 180px;
+}
+
+.footertext {
+    font-family: 'otr';
+    font-variation-settings: 'wght'115;
+    font-size: .85rem;
+    color: var(--platinum_grey);
+}
+
+#copyspan {
+    font-size: 1.25rem;
+}
+
+.footerlink {
+    font-family: 'otr';
+    font-variation-settings: 'wght'115;
+    font-size: .95rem;
+    color: var(--lime_green);
+}
+
+#footerspan {
+    font-variation-settings: 'wght'100;
+    font-size: 0.65rem;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    #headertext {
+        font-size: 1.250rem;
+        font-variation-settings: 'wght'130;
+    }
+
+    #herosubtitle {
+        font-size: 1.15rem;
+    }
+
+
+    .herotitlebig {
+        font-size: 4rem;
+        font-variation-settings: 'wght'105;
+    }
+
+    #herotitle-atthew {
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'135;
+    }
+
+    #herotitle-erson {
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-astro {
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-ivar {
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'180;
+    }
+
+    #v-spacing {
+        letter-spacing: -0.700rem;
+    }
+
+    #heroh1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    svg.svgicon {
+        height: 22px;
+        width: auto;
+    }
+
+    .btnhover:hover h3 {
+        font-variation-settings: 'wght'150;
+        color: #D1BF9B;
+        /* transition: cubic-bezier(.35, .6, .89, .44); */
+        transition-duration: 0.75s, 0.75s;
+    }
+
+    #aboutwrapper>p {
+        font-size: 1.25rem;
+        line-height: 175%;
+    }
+
+    .projectimage {
+        width: 100%;
+        height: auto;
+    }
+
+    .projectitemcontainer {
+        display: grid;
+        grid-template-columns: 35% auto;
+        grid-template-rows: repeat(4, auto);
+        column-gap: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .imagecontainer {
+        grid-column: 2;
+        grid-row: -1 / 2;
+        align-self: end;
+        justify-self: normal;
+        margin-top: 3rem;
+    }
+
+    .imagescontainerspecial {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+        /* grid-gap: 10px; */
+        justify-items: center;
+        row-gap: 5rem;
+
+        /* Set a fixed height for the grid container */
+        /* height: 1000px; */
+    }
+
+    .imagescontainerspecial>div {
+        /* Set the maximum height to 50% */
+        max-height: 40%;
+        max-width: 50%;
+        /* Maintain aspect ratio and fill the available space */
+        object-fit: cover;
+    }
+
+    video {
+        max-height: 800px;
+        max-width: 100%;
+    }
+
+
+    .stickyitem {
+        position: fixed;
+        z-index: 1000;
+    }
+
+
+    .projectheader {
+        grid-column: 1;
+        grid-row: 3;
+        bottom: 20%;
+        height: auto;
+        width: 30%;
+
+    }
+
+    .project-description {
+        font-size: 1.115rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.050rem;
+    }
+
+    .bold-text {
+        font-size: 1rem;
+        font-weight: 450;
+    }
+
+
+
+    .closeoverlayButton {
+        justify-self: end;
+        grid-column: 2 / 3;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .grid-item {
+        grid-column: 1 / 1;
+        grid-row: 4;
+        row-gap: 2rem;
+        align-self: end;
+        bottom: 1vh;
+        position: fixed;
+        z-index: 1000;
+        width: 30%;
+        height: auto;
+    }
+
+
+    h1.project-title {
+        font-family: 'otr';
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'110;
+    }
+
+    .projectlinkButton {
+        padding: 6px 36px;
+    }
+
+    .projectlinkButton:hover {
+        filter: drop-shadow(0 0 0.5rem #47443D);
+        transition: .75s ease-in-out
+    }
+
+    img.buttonicon {
+        min-width: 110%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
+    section {
+        margin-bottom: 5rem;
+    }
+
+
+    /* Skills */
+
+    .vertical-lining {
+        height: inherit;
+        width: 2px;
+        background-color: var(--creater_brown);
+        margin: 0;
+    }
+
+    /* gameboks */
+
+    .gameboks {
+        bottom: 30%;
+    }
+
+    .w-gb {
+        width: 35%;
+    }
+
+    /* Danish Gallery */
+
+    .top-margin {
+        margin-top: 10rem;
+    }
+
+    /* ballin */
+
+
+    /* CC */
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    .cc {
+        bottom: 50%;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    #headertext {
+        font-size: 1.250rem;
+        font-variation-settings: 'wght'130;
+    }
+
+    #herosubtitle {
+        font-size: 1.25rem;
+
+    }
+
+
+    .herotitlebig {
+        font-size: 5rem;
+        font-variation-settings: 'wght'105;
+    }
+
+    #herotitle-atthew {
+        font-size: 3rem;
+        font-variation-settings: 'wght'135;
+    }
+
+    #herotitle-erson {
+        font-size: 3rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-astro {
+        font-size: 3rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-ivar {
+        font-size: 3rem;
+        font-variation-settings: 'wght'180;
+    }
+
+    #v-spacing {
+        letter-spacing: -0.700rem;
+    }
+
+    .projectheader {
+        bottom: 44%;
+    }
+
+    .projectheaderdg {
+        bottom: 44%;
+    }
+
+    .cc {
+        bottom: 44%;
+    }
+
+
+
+    h1.fontsize1280 {
+        font-size: 2rem;
+    }
+
+    .gameboks {
+        bottom: 40%;
+    }
+
+    .w-gb {
+        width: 37%;
+    }
+
+    .headerballin {
+        bottom: 46%;
+    }
+
+    iframe {
+        width: 700px;
+        height: 393.5px;
+    }
+
+
+
+
+}
+
+
+
+@media (min-width:1440px) {
+    .projectheaderdg {
+        bottom: 32%;
+    }
+
+    .gameboks {
+        bottom: 27%;
+    }
+
+    .w-gb {
+        width: 40%;
+    }
+
+    .headerballin {
+        bottom: 38%;
+    }
+
+    .cc {
+        bottom: 35%;
+    }
+
+    .wcc {
+        width: 35%;
+    }
+
+
+
+
+}
+
+
+
+@media (min-width: 1536px) {
+    #heroh1 {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+
+    .projectheader {
+        top: 58%;
+    }
+
+    .projectheaderdg {
+        top: 55%;
+    }
+
+    h1.project-title {
+        font-family: 'otr';
+        font-size: 2.5rem;
+        font-variation-settings: 'wght'110;
+    }
+
+    .gameboks {
+        top: 69%;
+    }
+
+    .headerballin {
+        top: 55%;
+    }
+
+    .cc {
+        top: 45%;
+    }
+
+    iframe {
+        width: 840px;
+        height: 472.5px;
+    }
+
+    .wcc {
+        width: 30%;
+    }
+
+}
+
+
+@media (min-width: 2000px) {
+
+    header,
+    #hero,
+    #about,
+    #projectsnworks,
+    #skills,
+    #contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .projectitemcontainer {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+
+    #heroh1 {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .herotitlebig {
+        font-size: 5.5rem;
+        font-variation-settings: 'wght'105;
+    }
+
+    #herotitle-atthew {
+        font-size: 3.25rem;
+        font-variation-settings: 'wght'135;
+    }
+
+    #herotitle-erson {
+        font-size: 3.25rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-astro {
+        font-size: 3.25rem;
+        font-variation-settings: 'wght'153;
+    }
+
+    #herotitle-ivar {
+        font-size: 3.25rem;
+        font-variation-settings: 'wght'180;
+    }
+
+
+    main>section#projectsnworks>aside#overlayscontainer {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    h1.project-title {
+        font-family: 'otr';
+        font-size: 2.75rem;
+        font-variation-settings: 'wght'110;
+    }
+
+    .projectlinkButton {
+        /* padding: 6px 36px; */
+        padding: 10px 60px;
+    }
+
+    img.buttonicon {
+        transform: scale(1.25);
+        display: block;
+        margin: 0 auto;
+    }
+
+    .project-description {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .bold-text {
+        font-size: 1.15rem;
+        font-weight: 400;
+    }
+
+    .projectheader {
+        top: 70%;
+    }
+
+    .projectheaderdg {
+        top: 65%;
+    }
+
+    .gameboks {
+        top: 78%;
+    }
+
+
+    /* 'iframe {
+        width: 840px;
+        height: 473px;
+    }' */
+
+
+
+
+
+}

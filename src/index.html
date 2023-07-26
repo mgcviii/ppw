@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGCV</title>
+  <link href="https://fonts.cdnfonts.com/css/argentum-sans?styles=28995,28991" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.addEventListener('load', function () {
+      var params = new URLSearchParams(window.location.search);
+      var from = params.get('from');
+
+      if (from === 'other') {
+        removePreloaderAnimation();
+        removeWelcomeMessage();
+        removeOverflowHiddenClass();
+      }
+    });
+
+    // Function to remove preloader animation
+    function removePreloaderAnimation() {
+      var animateElements = document.querySelectorAll('.animate');
+      for (var i = 0; i < animateElements.length; i++) {
+        var element = animateElements[i];
+        element.style.width = '0%';
+        element.style.visibility = 'hidden';
+      }
+    }
+
+    // Function to remove welcome message
+    function removeWelcomeMessage() {
+      var disappearElement = document.querySelector('.disappear');
+      disappearElement.style.opacity = 0;
+    }
+
+    // Function to remove "overflow-hidden" class from body
+    function removeOverflowHiddenClass() {
+      document.body.classList.remove('overflow-hidden');
+    }
+  </script>
+</head>
+
+<body class="bg-graphite min-w-full overflow-hidden  ">
+  <!-- Grid Guides -->
+  <!-- mobile & tablet -->
+  <div class="grid grid-cols-4 mx-2.5 gap-5 lg:hidden"></div>
+  <!-- Desktop -->
+  <div class="hidden lg:grid grid-cols-12 mx-2.5 gap-5"></div>
+
+  <div id="preloader" class="preloader fixed overflow-hidden">
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate">
+      <h1 class="font-otr text-center self-center lg:text-6xl text-lime_green disappear welcome">WELCOME</h1>
+    </div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+    <div class="box1 col animate"></div>
+  </div>
+
+  <!-- <header class=" relative mx-2.5 my-1 lg:mx-10 xl:mx-12 2xl:mx-20">
+    <h4 id="headertext" class="font-otr text-beige">MGCV</h4>
+  </header> -->
+
+
+  <main class="relative mx-2.5 my-1 lg:mx-10 xl:mx-12 2xl:mx-20 ">
+
+    <header class="header">
+      <h4 id="headertext" class="font-otr text-beige">MGCV</h4>
+    </header>
+
+    <!-- For Tablet and Mobile -->
+    <section id="hero" class="section relative h-[95vh] flex flex-col justify-center items-center">
+
+      <div id="heroh1" class="flex justify-center items-center h-1/2">
+        <h1 id="mgcv" class="font-otr text-beige text-center justify-center items-center flex-1 expand">
+          <span class="herotitlebig ">M</span><span id="herotitle-atthew" class="">ATTHEW</span>
+          <span class="herotitlebig ">G</span><span id="herotitle-erson" class="">ERSON</span>
+          <span class="herotitlebig ">C</span><span id="herotitle-astro" class="">ASTRO</SPAN>
+          <span class="herotitlebig ">V</span><span id="herotitle-ivar" class="">I<span id="v-spacing"
+              class="">V</span>AR</span>
+        </h1>
+      </div>
+
+      <div class="absolute bottom-0 right-0 md:relative ">
+        <h4 id="herosubtitle" class="text-white text-right md:text-center">MULTIMEDIA DESIGN STUDENT <span>/</span> <br
+            class="md:hidden
+          ">
+          ASPIRING DIGITAL DESIGNER</h4>
+      </div>
+
+    </section>
+
+    <section id="about" class="section h-[95vh] grid grid-cols-1 items-start">
+      <h2 class="text-beige font-otr my-10 lg:col-start-1 lg:col-span-2">ABOUT ME</h2>
+      <div class="aboutcontainer py-20 lg:grid lg:grid-cols-2 lg:items-center">
+
+        <div id="aboutwrapper" class="relative lg:col-start-2 ">
+          <P class=" text-white py-5">Hi there! My name is Matthew (incase you haven't notice the big heading).
+          </P>
+          <p class=" text-white py-5 stP"> <span class="fadeout"> I am a 3rd semester</span> Multimedia Design student
+            at
+            KEA
+            <span class="fadeout"> (Copenhagen School of Design and Technology). My</span> goal <span class="fadeout">
+              is
+              to </span> become a digital designer <span class="fadeout">and</span> create visually appealing digital
+            solutions <span class="fadeout">with focus on</span> UI / UX <span class="fadeout"> and </span>
+            attention to detail.
+          </p>
+          <p class=" text-white py-5 "><span class="fadeout"> I have a </span><span>background in</span> marketing <span
+              class="fadeout">and worked as a </span> <span> marketing student
+              assistant</span> <span class="fadeout"> for a year. When away from my screen and keyboard, I enjoy playing
+              basketball or casting a fishing rod in the waters around Copenhagen.</span>
+          </p>
+        </div>
+
+        <div class="lg:col-start-1 lg:row-start-1 relative">
+          <img src="/img/profilepic2.png" alt="" class="me">
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="projectsnworks" class="section h-[95vh] grid grid-cols-1 items-center relative">
+      <article id="projectswrapper">
+        <h2 class="text-beige font-otr my-10">PROJECTS <SPAN class="font-argentum text-beige">/</SPAN> WORKS</h2>
+        <ul class="py-20 ">
+          <li class=" border-t-2 border-t-creater_brown py-5">
+            <a class="flex  justify-between items-center btnhover" href="/smaks.html">
+              <h3 class="text-white">SMAKS</h3><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.3387 12.552L9.86266 24.028L7.97733 22.1427L19.452 10.6667H9.33866V8H24.0053V22.6667H21.3387V12.552Z"
+                  fill="#D1BF9B" />
+              </svg>
+            </a>
+          </li>
+          <li class="border-t-2 border-t-creater_brown py-5">
+            <a class="flex justify-between items-center btnhover" href="/ballin.html">
+              <h3 class="text-white">BALLIN</h3><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.3387 12.552L9.86266 24.028L7.97733 22.1427L19.452 10.6667H9.33866V8H24.0053V22.6667H21.3387V12.552Z"
+                  fill="#D1BF9B" />
+              </svg>
+            </a>
+          </li>
+          <li class=" border-t-2 border-t-creater_brown py-5">
+            <a class="flex justify-between items-center btnhover" href="/cc.html">
+              <h3 class="text-white">COPENHAGEN CARTEL</h3><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.3387 12.552L9.86266 24.028L7.97733 22.1427L19.452 10.6667H9.33866V8H24.0053V22.6667H21.3387V12.552Z"
+                  fill="#D1BF9B" />
+              </svg>
+            </a>
+          </li>
+          <li class=" border-t-2 border-t-creater_brown py-5">
+            <a class="flex justify-between items-center btnhover" href="/danishgallery.html">
+              <h3 class="text-white">DANISH GALLERY</h3><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.3387 12.552L9.86266 24.028L7.97733 22.1427L19.452 10.6667H9.33866V8H24.0053V22.6667H21.3387V12.552Z"
+                  fill="#D1BF9B" />
+              </svg>
+            </a>
+          </li>
+          <li class=" border-y-2 border-y-creater_brown py-5 ">
+            <a class="flex justify-between items-center btnhover" href="/gameboks.html">
+              <h3 class="text-white">GAMEBOKS</h3><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.3387 12.552L9.86266 24.028L7.97733 22.1427L19.452 10.6667H9.33866V8H24.0053V22.6667H21.3387V12.552Z"
+                  fill="#D1BF9B" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+
+    <section id="skills" class="relative section h-[95vh] grid grid-cols-1 items-center">
+
+      <div id="skills-container" class="">
+        <h2 class="text-beige my-10">SKILLS</h2>
+        <div id="skillsnratings-container"
+          class=" grid grid-flow-row gap-10 lg:grid-flow-col lg:justify-evenly lg:py-20">
+          <div id="confident-rating" class=" ">
+            <h3 class="rating text-white uppercase">Things I am confident with</h3>
+            <ul class="flex flex-col pt-3 gap-3">
+              <li class="skill">FIGMA</li>
+              <li class="skill">HTML</li>
+              <li class="skill">CSS</li>
+              <li class="skill">TAILWIND</li>
+              <li class="skill">BASKETBALL</li>
+              <li class="skill">FISHING</li>
+            </ul>
+          </div>
+          <div class=" vertical-lining hidden lg:block"></div>
+          <div id="basic-rating" class=" ">
+            <h3 class="rating text-white uppercase">Things I know my way around</h3>
+            <ul class="flex flex-col pt-3 gap-3">
+              <li class="skill">ADOBE PHOTOSHOP</li>
+              <li class="skill">ADOBE ILLUSTRATOR</li>
+              <li class="skill">ADOBE PREMIERE PRO</li>
+              <li class="skill">ADOBE XD</li>
+            </ul>
+          </div>
+          <div class=" vertical-lining hidden lg:block"></div>
+          <div id="verybasic-rating">
+            <h3 class="rating text-white uppercase">NEXT QUESTION PLEASE</h3>
+            <ul class="flex flex-col gap-3 pt-3">
+              <li class="skill">JAVASCRIPT</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section h-[95vh] -mx-2.5 my-1 lg:-mx-10 xl:-mx-12 2xl:-mx-20 overflow-hidden ">
+      <div class="flex flex-col gap-[2vw] shrink-0 justify-center items-center text-center h-full">
+        <div class="cursor-pointer">
+          <ul id="#textBanner" class="text-banner text-[12vw] md:text-[10vw] flex justify-around shrink-0 gap-[2vw]">
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+            <li>
+              <a href="mailto:matthew.gcv.com" class=" uppercase email">matthew.gcv@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="text-beige">GET IN TOUCH</h2>
+      </div>
+    </section>
+  </main>
+  <footer class="px-5 py-5 footer bg-graphite grid grid-cols-2">
+    <p class="footerlink"><a href="https://www.linkedin.com/in/matthewgersonvivar/" target="_blank">LINKEDIN</a></p>
+    <div class="">
+      <p class=" footertext lg:text-right"><span id="copyspan">©</span> 2023 MGCV</p>
+      <p class=" footertext text-center lg:text-right">
+        DESIGNED AND CODED BY ME
+        <br class=" lg:hidden">
+        <span id="footerspan">
+          ( WITH SOME HELP FROM CHAT GPT )
+        </span>
+      </p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="main.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
