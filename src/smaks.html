@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/argentum-sans?styles=28995,28991" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>SMAKS</title>
+</head>
+
+<body>
+    <main class="relative mx-2.5 my-1 lg:mx-10 xl:mx-12 2xl:mx-20">
+        <section id="overlayscontainer" class=" -mx-2.5 -my-1 grid  grid-flow-row lg:-mx-10 xl:-mx-12 2xl:-mx-20 ">
+
+            <div id="smaksContent"
+                class="projectitemcontainer overlay min-h-screen min-w-full bg-mocha p-2.5 lg:px-10 xl:px-12 2xl:px-20">
+                <a href="index.html?from=other#projectsnworks" id="backButton"
+                    class="closeoverlayButton font-argentum text-lime_green stickyitem font-light lg:text-sm ">BACK TO
+                    PROJECTS
+                </a>
+
+                <div class="relative imagecontainer top-margin bot-margin">
+                    <img class="projectimage " src="img/SMAKS/smaks-hero.webp" alt="">
+                    <img class="projectimage " src="img/SMAKS/smaks-hero-2.webp" alt="">
+                    <img class="projectimage " src="img/SMAKS/smaks-scrolled.webp" alt="">
+                    <img class="projectimage" src="img/SMAKS/smaks-products.webp" alt="">
+                    <img class="projectimage" src="img/SMAKS/smaks-productview.webp" alt="">
+                </div>
+
+                <div
+                    class="projectheader flex flex-row justify-between items-center lg:flex-col lg:items-start lg:self-end stickyitem">
+                    <h1 class="project-title">SMAKS</h1>
+                    <div>
+                        <a role="button" title="LINK TO THE PROTOTYPE"
+                            href="https://xd.adobe.com/view/22669149-83e0-423c-9d99-e56dd22554f1-7735/?fullscreen"
+                            target="_blank" class="projectlinkButton tooltip bg-creater_brown inline-block">
+                            <img class="buttonicon" src="img/linkicon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-item stickyitem">
+                    <p class="project-description">A prototype project of a simplified online t-shirt store catered to
+                        the younger
+                        target audience. The design
+                        is simple and clean with focus on simple yet enjoyable user experience. The prototype was
+                        created in Adobe
+                        XD. Each member from the group pitched in with different ideas ( visually and how the website
+                        should
+                        function), aside from pitching in my visual ideas, my role was to also create the prototype in
+                        Adobe XD.
+                    </p>
+                    <p class="bold-text">ADOBE XD | PHOTOSHOP | PROTOTYPING </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var elements = document.querySelectorAll("#backButton, .imagecontainer, .projectheader, .grid-item");
+
+        elements.forEach(function (element) {
+            element.style.opacity = "0";
+            element.style.transform = "translateY(30px)";
+        });
+
+        var timeline = anime.timeline({
+            autoplay: false // Disable automatic animation
+        });
+
+        timeline
+            .add({
+                targets: elements,
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 1000,
+                easing: "easeOutQuad",
+
+            });
+
+        // Play the animation initially
+        timeline.play();
+
+        // Trigger fade-out animation when the user clicks on the <a> with #backButton ID
+        var backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default behavior of the link
+
+            // Animate opacity to gradually decrease to 0
+            anime({
+                targets: elements,
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutQuad",
+                delay: anime.stagger(100),
+                complete: function () {
+                    // Navigate to the link
+                    window.location.href = backButton.href;
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
